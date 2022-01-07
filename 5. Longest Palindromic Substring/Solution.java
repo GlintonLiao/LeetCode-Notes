@@ -9,4 +9,16 @@ public class Solution {
     }
     return result;
   }
+
+  private String helper(String s, int l, int r) {
+    while (l >= 0 && r <= s.length() - 1) {
+      if (s.charAt(l) == s.charAt(r)) {
+        l--;
+        r++;
+      } else {
+        return s.substring(l + 1, r);
+      }
+    }
+    return s.substring(l + 1, r);
+  }
 }
