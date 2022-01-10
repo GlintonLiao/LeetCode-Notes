@@ -17,8 +17,7 @@ class Solution {
     
   int[] levelSum = new int[10010];
   public int deepestLeavesSum(TreeNode root) {
-      if (root.left == null && root.right == null) return root.val;
-      int deepest = Math.max(traverse(root.left, 1), traverse(root.right, 1));
+      int deepest = traverse(root, 0);
       return levelSum[deepest];
   }
   
