@@ -15,14 +15,15 @@ Attend the first event on day 1.
 Attend the second event on day 2.
 Attend the third event on day 3.
 ```
-
 ## 解题思路
 
 #### 思考
 
 对于满足范围的每一天来说，只要当前这一天能清掉一个区间，就清掉一个（贪心）。
 
-所以，我们需要在每一天加入所有从这一天开始可以被清掉的区间，以及去除在这一天已经超出区间右端点的区间。
+所以，我们需要在每一天加入所有从这一天开始可以被清掉的区间，以及去除在这一天已经超出区间右端点的区间
+
+> 所以说，这个最小堆维护的是**当前还能被使用的区间。**
 
 如果此时堆不为空，则可以清掉一个区间，同时结果加一。
 
@@ -34,3 +35,7 @@ Attend the third event on day 3.
 4. 如果有区间的右端点已经小于今天，说明这个区间已经不能再用了，就清掉。
 5. 如果堆内还有元素，则弹出一个元素，同时让结果加一。
 6. 返回结果。
+
+#### 其他代码的解法
+
+[LeetCode Discussion](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/discuss/510263/JavaC%2B%2BPython-Priority-Queue)
