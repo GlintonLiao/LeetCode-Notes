@@ -30,7 +30,7 @@ The substring with start index = 6 is "bac", which is an anagram of "abc".
 
 1. 制作一个 `HashMap`，将模版字符串 `p` 的每个字符放入 `map`。
 
-```
+```java
 Map<Character, Integer> map = new HashMap<>();
 for (char c : p.toCharArray()) {
     map.put(c, map.getOrDefault(c, 0) + 1);
@@ -38,7 +38,7 @@ for (char c : p.toCharArray()) {
 ```
 2. 定义双指针 `l`，`r`，同时取得需要匹配的字母数量 `map.size()`。
 3. 使用右指针 `l` 遍历需要匹配的数组 `p`，如果当前字符能在 `map` 中找到，则让该字符对应的值减一，剪完如果变成 0 了，就让 `count` 减一。
-```
+```java
 while (r < sLen) {
     char c = s.charAt(r);
     if (map.containsKey(c)) {
@@ -49,7 +49,7 @@ while (r < sLen) {
 } 
 ```
 4. 当 `count` 为 0，即已经匹配完了需要匹配的所有字符，让左端点 `l` 左移，将对应字符滑出窗口，滑出时要让这个字符对应的值 + 1，如果加完之后对应值不为 0 了，`count` 就要加一（需要匹配的字符量加一了）。
-```
+```java
 while (count == 0) {
     char temp = s.charAt(l);
     if (map.containsKey(temp)) {

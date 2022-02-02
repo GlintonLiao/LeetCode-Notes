@@ -37,8 +37,8 @@ Note that buying on day 2 and selling on day 1 is not allowed because you must b
 
 2. 取以上两种操作的最大值，就是今天所有操作的利润最大值。
 
-```
 状态计算公式为:
+```java
 f[i] = Math.max(0, f[i - 1] + prices[i] - prices[i - 1]);
 ```
 
