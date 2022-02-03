@@ -26,7 +26,7 @@ Explanation: Surrounded regions should not be on the border, which means that an
 
 1. 这道题不需要单独开一个 `int[][] st` 数组，只需要把原矩阵对应值修改为一个别的字符就行。
 
-2. 本题也不需要「恢复现场」，因为并不涉及组合，而只是要把目标数找出来。
+2. 也不需要「恢复现场」，因为并不涉及组合，而只是要把目标数找出来。
 
 3. 在 dfs 的过程中，尽量在一开始判断越界问题，然后跳出递归。
 
@@ -42,7 +42,7 @@ private void dfs(char[][] board, int i, int j) {
 ```java
 // Good
 private void dfs(char[][] board, int i, int j) {
-    if (i < 0 || i >= board.length || j < 0 || j <= board[0].length) return;
+    if (i < 0 || i >= board.length || j < 0 || j >= board[0].length) return;
     dfs(...);
 }
 ```
