@@ -21,33 +21,33 @@ Output: [[1,2,3],[8,9,4],[7,6,5]]
 // 螺旋遍历矩阵模版
 // 用四条边作为边界，一边填数一边更新边界
 public static int[][] generateMatrix(int n) {
-	int[][] matrix = new int[n][n];
-	int left = 0,top = 0;
-	int right = n - 1,down = n - 1;
-	int num = 1;
+  int[][] matrix = new int[n][n];
+  int left = 0,top = 0;
+  int right = n - 1,down = n - 1;
+  int num = 1;
 
-	while (left <= right) {
-		for (int j = left; j <= right; j ++) {
-			matrix[top][j] = num ++;
-		}
-		top ++;
+  while (left <= right) {
+    for (int j = left; j <= right; j ++) {
+      matrix[top][j] = num ++;
+    }
+    top ++;
 
-		for (int i = top; i <= down; i ++) {
-			matrix[i][right] = num ++;
-		}
-		right --;
+    for (int i = top; i <= down; i ++) {
+      matrix[i][right] = num ++;
+    }
+    right --;
 
-		for (int j = right; j >= left; j --) {
-			matrix[down][j] = num ++;
-		}
-		down --;
+    for (int j = right; j >= left; j --) {
+      matrix[down][j] = num ++;
+    }
+    down --;
 
-		for (int i = down; i >= top; i --) {
-			matrix[i][left] = num ++;
-		}
-		left ++;
-	}
+    for (int i = down; i >= top; i --) {
+      matrix[i][left] = num ++;
+    }
+    left ++;
+  }
 
-	return matrix;
+  return matrix;
 }
 ```
