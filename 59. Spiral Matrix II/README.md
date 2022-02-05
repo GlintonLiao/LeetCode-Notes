@@ -19,6 +19,7 @@ Output: [[1,2,3],[8,9,4],[7,6,5]]
 
 ```java
 // 螺旋遍历矩阵模版
+// 用四条边作为边界，一边填数一边更新边界
 int leftBound = 0, upperBound = 0, rightBound = n - 1, lowerBound = n - 1;
 int num = 1;
     
@@ -54,6 +55,5 @@ while (num <= n * n) {
         }
         leftBound++;
     }
-    
   }
 ```
