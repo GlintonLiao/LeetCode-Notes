@@ -20,40 +20,34 @@ Output: [[1,2,3],[8,9,4],[7,6,5]]
 ```java
 // 螺旋遍历矩阵模版
 // 用四条边作为边界，一边填数一边更新边界
-int leftBound = 0, upperBound = 0, rightBound = n - 1, lowerBound = n - 1;
-int num = 1;
-    
-while (num <= n * n) {
-    // left to right
-    if (upperBound <= lowerBound) {
-        for (int j = leftBound; j <= rightBound; j++) {
-            matrix[upperBound][j] = num++;
-        }
-        upperBound++;
-    }
-    
-    // top to bottom
-    if (leftBound <= rightBound) {
-        for (int i = upperBound; i <= lowerBound; i++) {
-            matrix[i][rightBound] = num++;
-        }
-        rightBound--;
-    }
-    
-    // right to left
-    if (upperBound <= lowerBound) {
-        for (int j = rightBound; j >= leftBound; j--) {
-            matrix[lowerBound][j] = num++;
-        }
-        lowerBound--;
-    }
-    
-    // bottom to top
-    if (leftBound <= rightBound) {
-        for (int i = lowerBound; i >= upperBound; i--) {
-            matrix[i][leftBound] = num++;
-        }
-        leftBound++;
-    }
-  }
+public static int[][] generateMatrix(int n) {
+	int[][] matrix = new int[n][n];
+	int left = 0,top = 0;
+	int right = n - 1,down = n - 1;
+	int num = 1;
+
+	while (left <= right) {
+		for (int j = left; j <= right; j ++) {
+			matrix[top][j] = num ++;
+		}
+		top ++;
+
+		for (int i = top; i <= down; i ++) {
+			matrix[i][right] = num ++;
+		}
+		right --;
+
+		for (int j = right; j >= left; j --) {
+			matrix[down][j] = num ++;
+		}
+		down --;
+
+		for (int i = down; i >= top; i --) {
+			matrix[i][left] = num ++;
+		}
+		left ++;
+	}
+
+	return matrix;
+}
 ```
