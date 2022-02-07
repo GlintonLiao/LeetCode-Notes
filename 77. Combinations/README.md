@@ -23,9 +23,9 @@ Output:
 
 ## 解题思路
 
-本题考查 dfs 去重，我的解法是传统 dfs 加上一个不断更新的起始点 start，选完一轮就把 start + 1。
+本题考查 `dfs` 去重，我的解法是传统 `dfs` 加上一个不断更新的起始点 `start`，选完一轮就把 `start + 1`。
 
-但因为数组元素连续上升，所以其实更优的方法是直接 dfs(int start, int n, int k)，在递归中更新起点。
+但因为数组元素连续上升，所以其实更优的方法是直接 `dfs(int start, int n, int k)`，在递归中更新起点。
 
 ```java
 private void dfs(int start, int n, int k) {
