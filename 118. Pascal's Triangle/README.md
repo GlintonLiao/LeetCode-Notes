@@ -1,6 +1,6 @@
 # 118. Pascal's Triangle
 
-Given an integer numRows, return the first numRows of Pascal's triangle.
+Given an integer `numRows`, return the first `numRows` of Pascal's triangle.
 
 In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:
 
@@ -24,4 +24,4 @@ Output: [[1]]
 
 取到上一行的 List，双指针相加即可。
 
-但是这题做得有点傻，用的数组，其实直接 new 一个 List 就行的。虽然最后也是 beats 100% 了。
+但是这题做得有点傻，用的数组，其实直接 new 一个 List 就行的。虽然最后也是 beats 100% 了......
