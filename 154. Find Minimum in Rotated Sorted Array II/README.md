@@ -33,3 +33,9 @@ Output: 0
 + `1 <= n <= 5000`
 + `-5000 <= nums[i] <= 5000`
 + nums is sorted and rotated between `1` and `n` times.
+
+## 解题思路
+
+二分查找，如果 mid 值大于 r 值，说明答案在右边，反之在左边。
+
+因为数组存在重复元素，所以当 mid 值 == r 值时，无法确定答案，就让 r 减一。
