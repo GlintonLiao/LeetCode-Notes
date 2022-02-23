@@ -12,8 +12,6 @@ Return the *knight's minimum initial health* so that he can rescue the princess.
 
 **Note** that any room can contain threats or power-ups, even the first room the knight enters and the bottom-right room where the princess is imprisoned.
 
-
-
 #### Example 1:
 
 ![example img](https://assets.leetcode.com/uploads/2021/03/13/dungeon-grid-1.jpg)
