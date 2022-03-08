@@ -15,9 +15,6 @@
  */
 public class Solution {
   public boolean hasCycle(ListNode head) {
-    // edge case
-    if (head == null && head.next == null) return false;
-
     // 快慢指针
     ListNode fast = head;
     ListNode slow = head;
@@ -30,5 +27,4 @@ public class Solution {
     }
     return false;
   }
-  
 }
