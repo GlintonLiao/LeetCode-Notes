@@ -41,3 +41,6 @@ If we had started at the first tree, we would only pick from trees [1,2].
 + `1 <= fruits.length <= 105`
 + `0 <= fruits[i] < fruits.length`
 
+## 解题思路
+
+说了一堆，其实就是「最多出现两个不同字母的区间最大值」，所以用滑动窗口去维护就好了。
