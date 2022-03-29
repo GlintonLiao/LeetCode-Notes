@@ -39,5 +39,3 @@ Can you solve the problem in linear runtime complexity?
 最简单的方式是做一个 st[] 数组，遍历时将已经遍历过的数设为 true，遇到 true 就返回当前数。
 
 但如果需要满足 O(1) 的空间复杂度，就可以用二分查找（效率并不如上面那种高）。
-
-
