@@ -41,3 +41,7 @@ Output: -1
 + All the pairs of trust are **unique**.
 + `ai != bi`
 + `1 <= ai, bi <= n`
+
+## 解题思路
+
+比较简单，直接做两个数组，一个记录是否 trust 别人，一个记录被多少人 trust。找到被 trust 数量最多的那个人，检测数量是否等于 n - 1，以及是否有 trust 别人即可。
