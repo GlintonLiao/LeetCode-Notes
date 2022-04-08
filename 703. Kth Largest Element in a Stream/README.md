@@ -33,3 +33,7 @@ kthLargest.add(4);   // return 8
 + `-10^4 <= val <= 10^4`
 + At most `10^4`calls will be made to add.
 + It is guaranteed that there will be at least `k` elements in the array when you search for the `kth` element.
+
+## 解题思路
+
+做一个大根堆，把所有元素推入，当 size 大于 k 时，往外推元素，即可。
