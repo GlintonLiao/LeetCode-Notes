@@ -25,3 +25,9 @@ Output: [1]
 #### Follow up: 
 
 Your algorithm's time complexity must be better than `O(n log n)`, where `n` is the array's size.
+
+## 解题思路
+
+先排序，然后做一个以出现次数排序的大根堆，然后双指针把所有元素都加进去
+
+最后将大根堆内的前 k 个元素弹出即可。
