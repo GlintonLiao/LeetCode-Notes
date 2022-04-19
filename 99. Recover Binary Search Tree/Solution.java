@@ -13,41 +13,39 @@
  *     }
  * }
  */
-class Solution {
+public class Solution {
     
-    TreeNode firstElement = null;
-    TreeNode secondElement = null;
-    TreeNode prevElement = new TreeNode(Integer.MIN_VALUE); // to avoid null pointer exception
+    TreeNode n1 = null;
+    TreeNode n2 = null;
+    TreeNode prev = null;
     
     public void recoverTree(TreeNode root) {
         
-        // In order traversal to find two element
         traverse(root);
         
-        // swap the values of the two nodes
-        int temp = firstElement.val;
-        firstElement.val = secondElement.val;
-        secondElement.val = temp;
-        
+        int temp = n1.val;
+        n1.val = n2.val;
+        n2.val = temp;
     }
     
     private void traverse(TreeNode root) {
-        if (root == null) { return; }
         
+        if (root == null) return;
+            
         traverse(root.left);
         
-        // if the first element has not been found, assign it to prevElement
-        if (firstElement == null && prevElement.val > root.val) {
-            firstElement = prevElement;
+        // If first element has not been found, assign it to prev
+        if (n1 == null && prev != null && prev.val >= root.val) {
+            n1 = prev;
+        }
+    
+        // If first element is found, assign the second element to the root
+        if (n1 != null && prev.val >= root.val) {
+            n2 = root;
         }
         
-        // if the first element is found, assign the second element to the root
-        if (firstElement != null && prevElement.val > root.val) {
-            secondElement = root;
-        }
-        
-        prevElement = root;
-        
+        prev = root;
+
         traverse(root.right);
     }
 }
