@@ -41,12 +41,13 @@ The longest of these was the keypress for 'a' with duration 16.
 
 #### Constraints:
 
-+ releaseTimes.length == n
-+ keysPressed.length == n
-+ 2 <= n <= 1000
-+ 1 <= releaseTimes[i] <= 109
-+ releaseTimes[i] < releaseTimes[i+1]
++ `releaseTimes.length == n`
++ `keysPressed.length == n`
++ `2 <= n <= 1000`
++ `1 <= releaseTimes[i] <= 10^9`
++ `releaseTimes[i] < releaseTimes[i+1]`
 + keysPressed contains only lowercase English letters.
 
 ## 解题思路
 
+简单模拟即可，记得特判两者相等的情况
