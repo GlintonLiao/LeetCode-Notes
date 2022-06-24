@@ -5,9 +5,7 @@ You are given an array `target` of `n` integers. From a starting array `arr` con
 + let `x` be the sum of all elements currently in your array.
 + choose index `i`, such that `0 <= i < n` and set the value of arr at index `i` to `x`.
 + You may repeat this procedure as many times as needed.
-Return `true` if it is possible to construct the target array from arr, otherwise, return `false`.
-
- 
+Return `true` if it is possible to construct the `target` array from `arr`, otherwise, return `false`.
 
 #### Example 1:
 
