@@ -27,3 +27,7 @@ Explanation: You can't get a non-decreasing array by modify at most one element.
 + `n == nums.length`
 + `1 <= n <= 104`
 + `-105 <= nums[i] <= 105`
+
+## 解题思路
+
+三种情况分别讨论
