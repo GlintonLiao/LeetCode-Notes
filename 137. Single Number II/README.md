@@ -26,10 +26,13 @@ Output: 99
 2. n ^ n == 0, n ^ 0 == n
 3. ~1 == 0, ~0 == 1
 
+#### 自动机解法
 ```java
 // 将 nums[i] 加入 ones，当且仅当 twos 中没有 nums[i] 且 ones 中没有 nums[i]，当 num[i] 出现第 2 此，ones 会清零
 ones = (ones ^ nums[i]) & ~twos;
 // 将 nums[i] 加入 twos，当且仅当 ones 中有 nums[i]，当 nums[i] 出现第三遍，twos 会清零
 twos = (twos ^ nums[i]) & ~ones;
 ```
+#### 更容易想的解法
 
+遍历 32 个位置，如果这个位置上 `1` 的个数是 3 的倍数，说明多出来的那个数的这个位置上是 `0`，否则为 `1`
